@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const ROOT = path.resolve(".");
-const segmentDir = path.join(ROOT, "assets", "sapi_segments_rate2");
+const segmentDir = path.join(ROOT, "assets", "edge_yunjhe_wav");
 const outDir = path.join(ROOT, "assets");
 const pauseDuration = 0.35;
 
@@ -34,7 +34,7 @@ const timings = segments.map((name, index) => {
   cursor = end + (index === segments.length - 1 ? 0 : pauseDuration);
   return {
     slide: index + 1,
-    file: `assets/sapi_segments_rate2/${name}`,
+    file: `assets/edge_yunjhe_wav/${name}`,
     start: +start.toFixed(3),
     end: +end.toFixed(3),
     duration: +duration.toFixed(3),
@@ -43,7 +43,7 @@ const timings = segments.map((name, index) => {
 
 const concatLines = [];
 for (let i = 0; i < segments.length; i++) {
-  concatLines.push(`file 'sapi_segments_rate2/${segments[i]}'`);
+  concatLines.push(`file 'edge_yunjhe_wav/${segments[i]}'`);
   if (i !== segments.length - 1) concatLines.push("file 'pause_035.wav'");
 }
 

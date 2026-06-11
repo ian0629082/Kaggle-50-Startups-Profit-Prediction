@@ -1,4 +1,4 @@
-# Startup Profit AI Simulator Video Design
+﻿# Startup Profit AI Simulator Video Design
 
 ## Palette
 - Paper: #F7F0DD
@@ -20,6 +20,7 @@
 - Avoid jump cuts and avoid cropping the original slides.
 
 ## Composition
-- Format: 1080 x 1920 portrait.
-- Original 16:9 slides appear as full preserved cards inside the portrait frame.
-- Captions sit in the lower third and never cover the main slide content.
+- Format: 1920 x 1080 landscape.
+- Original 16:9 slides appear as full preserved cards in a landscape frame.
+- Captions sit in a right-side panel and never cover the main slide content.
+

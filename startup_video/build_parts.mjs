@@ -5,6 +5,9 @@ const ROOT = path.resolve(".");
 const PART_DIR = path.join(ROOT, "parts");
 fs.mkdirSync(PART_DIR, { recursive: true });
 
+const WIDTH = 1920;
+const HEIGHT = 1080;
+
 const captions = JSON.parse(fs.readFileSync(path.join(ROOT, "captions.json"), "utf8"));
 const narrationTiming = JSON.parse(fs.readFileSync(path.join(ROOT, "assets", "narration_timing.json"), "utf8"));
 const partStarts = [0, 5, 10, 15].map((index) => narrationTiming[index].start);
@@ -18,21 +21,21 @@ function partDuration(partIndex) {
 function css() {
   return `
       html, body { margin:0; width:100%; height:100%; background:#f7f0dd; overflow:hidden; font-family:Arial,sans-serif; color:#16212a; }
-      .root { position:relative; width:1080px; height:1920px; overflow:hidden; background:radial-gradient(circle at 18% 12%, rgba(244,200,74,.42), rgba(244,200,74,0) 34%), radial-gradient(circle at 90% 8%, rgba(139,92,246,.22), rgba(139,92,246,0) 32%), radial-gradient(circle at 82% 86%, rgba(0,168,168,.24), rgba(0,168,168,0) 38%), #f7f0dd; }
+      .root { position:relative; width:${WIDTH}px; height:${HEIGHT}px; overflow:hidden; background:radial-gradient(circle at 12% 12%, rgba(244,200,74,.42), rgba(244,200,74,0) 30%), radial-gradient(circle at 88% 14%, rgba(139,92,246,.22), rgba(139,92,246,0) 30%), radial-gradient(circle at 78% 88%, rgba(0,168,168,.24), rgba(0,168,168,0) 34%), #f7f0dd; }
       .grain { position:absolute; inset:0; opacity:.16; background-image:linear-gradient(rgba(22,33,42,.16) 1px, rgba(22,33,42,0) 1px), linear-gradient(90deg, rgba(22,33,42,.12) 1px, rgba(22,33,42,0) 1px); background-size:34px 34px; z-index:0; }
-      .meta { position:absolute; left:72px; top:54px; right:72px; display:flex; align-items:center; justify-content:space-between; font-size:22px; font-weight:800; letter-spacing:.02em; z-index:20; }
-      .tag { border:3px solid #16212a; border-radius:999px; padding:12px 22px; background:rgba(247,240,221,.72); box-shadow:6px 6px 0 rgba(22,33,42,.18); }
+      .meta { position:absolute; left:80px; top:48px; right:80px; display:flex; align-items:center; justify-content:space-between; font-size:24px; font-weight:800; letter-spacing:.02em; z-index:20; }
+      .tag { border:3px solid #16212a; border-radius:999px; padding:12px 24px; background:rgba(247,240,221,.72); box-shadow:6px 6px 0 rgba(22,33,42,.18); }
       .count { font-family:Consolas,monospace; color:#00a8a8; text-shadow:2px 2px 0 rgba(22,33,42,.16); }
-      .stage { position:absolute; left:72px; right:72px; top:180px; height:1220px; perspective:1600px; z-index:10; }
+      .stage { position:absolute; left:78px; top:178px; width:1276px; height:718px; perspective:1600px; z-index:10; }
       .slide-shell { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
-      .slide-card { position:relative; width:936px; height:522px; transform-style:preserve-3d; border:5px solid #16212a; border-radius:22px; background:#f7f0dd; box-shadow:24px 30px 0 rgba(22,33,42,.18), 0 34px 90px rgba(22,33,42,.22); overflow:hidden; }
+      .slide-card { position:relative; width:1276px; height:718px; transform-style:preserve-3d; border:5px solid #16212a; border-radius:18px; background:#f7f0dd; box-shadow:22px 26px 0 rgba(22,33,42,.18), 0 30px 80px rgba(22,33,42,.22); overflow:hidden; }
       .slide-card img { width:100%; height:100%; object-fit:cover; display:block; }
       .shine { position:absolute; inset:0; background:linear-gradient(110deg, rgba(255,255,255,0) 10%, rgba(255,255,255,.58) 48%, rgba(255,255,255,0) 72%); transform:translateX(-120%); opacity:0; }
-      .caption-wrap { position:absolute; left:70px; right:70px; bottom:230px; height:230px; display:flex; align-items:center; justify-content:center; z-index:30; }
-      .caption { position:absolute; max-width:880px; padding:28px 34px; border:4px solid #16212a; border-radius:24px; background:rgba(247,240,221,.92); box-shadow:12px 14px 0 rgba(0,168,168,.28); font-size:42px; line-height:1.38; font-weight:800; text-align:center; opacity:0; visibility:hidden; }
-      .accent-line { position:absolute; left:74px; right:74px; bottom:185px; height:8px; border-radius:999px; background:#00a8a8; transform-origin:left center; z-index:25; }
-      .corner-note { position:absolute; right:72px; bottom:76px; width:300px; min-height:135px; padding:26px; box-sizing:border-box; background:#f4c84a; border:4px solid #16212a; box-shadow:12px 14px 0 rgba(22,33,42,.2); transform:rotate(-4deg); z-index:18; font-size:24px; font-weight:900; line-height:1.25; }
-      .ring { position:absolute; width:210px; height:210px; border:8px solid #f05d5e; border-radius:50%; left:-54px; bottom:104px; opacity:.5; z-index:5; }
+      .caption-wrap { position:absolute; left:1422px; top:220px; width:410px; height:470px; display:flex; align-items:center; justify-content:center; z-index:30; }
+      .caption { position:absolute; width:100%; box-sizing:border-box; padding:30px 32px; border:4px solid #16212a; border-radius:18px; background:rgba(247,240,221,.94); box-shadow:12px 14px 0 rgba(0,168,168,.28); font-size:34px; line-height:1.36; font-weight:800; text-align:left; opacity:0; visibility:hidden; }
+      .accent-line { position:absolute; left:80px; right:80px; bottom:78px; height:8px; border-radius:999px; background:#00a8a8; transform-origin:left center; z-index:25; }
+      .corner-note { position:absolute; right:92px; bottom:118px; width:360px; min-height:126px; padding:24px 28px; box-sizing:border-box; background:#f4c84a; border:4px solid #16212a; box-shadow:12px 14px 0 rgba(22,33,42,.2); transform:rotate(-4deg); z-index:18; font-size:28px; font-weight:900; line-height:1.22; }
+      .ring { position:absolute; width:210px; height:210px; border:8px solid #f05d5e; border-radius:50%; left:-54px; bottom:-62px; opacity:.42; z-index:5; }
 `;
 }
 
@@ -67,8 +70,8 @@ function partHtml(partIndex) {
     <style>${css()}</style>
   </head>
   <body>
-    <div id="startup-profit-video-part-${partIndex + 1}" class="root" data-composition-id="startup-profit-video-part-${partIndex + 1}" data-start="0" data-duration="${duration}" data-width="1080" data-height="1920">
-      <audio id="narration" data-start="0" data-duration="${duration}" data-track-index="0" src="../assets/narration_fast_part${partIndex + 1}.wav" data-volume="1"></audio>
+    <div id="startup-profit-video-part-${partIndex + 1}" class="root" data-composition-id="startup-profit-video-part-${partIndex + 1}" data-start="0" data-duration="${duration}" data-width="${WIDTH}" data-height="${HEIGHT}">
+      <audio id="narration" data-start="0" data-duration="${duration}" data-track-index="0" src="../assets/narration_yunjhe_part${partIndex + 1}.wav" data-volume="1"></audio>
       <div class="grain" data-layout-ignore></div>
       <div class="meta"><div class="tag">Startup Profit AI Simulator</div><div class="count" id="counter">${String(startSlide).padStart(2, "0")} / 20</div></div>
       <div class="stage" id="stage"></div>

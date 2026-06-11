@@ -1,142 +1,142 @@
 [
   {
     "slide": 1,
-    "file": "assets/sapi_segments_rate2/segment_01.wav",
+    "file": "assets/edge_yunjhe_wav/segment_01.wav",
     "start": 0,
-    "end": 7.866,
-    "duration": 7.866
+    "end": 7.608,
+    "duration": 7.608
   },
   {
     "slide": 2,
-    "file": "assets/sapi_segments_rate2/segment_02.wav",
-    "start": 8.216,
-    "end": 15.598,
-    "duration": 7.381
+    "file": "assets/edge_yunjhe_wav/segment_02.wav",
+    "start": 7.958,
+    "end": 15.158,
+    "duration": 7.2
   },
   {
     "slide": 3,
-    "file": "assets/sapi_segments_rate2/segment_03.wav",
-    "start": 15.948,
-    "end": 24.035,
-    "duration": 8.087
+    "file": "assets/edge_yunjhe_wav/segment_03.wav",
+    "start": 15.508,
+    "end": 23.476,
+    "duration": 7.968
   },
   {
     "slide": 4,
-    "file": "assets/sapi_segments_rate2/segment_04.wav",
-    "start": 24.385,
-    "end": 30.676,
-    "duration": 6.292
+    "file": "assets/edge_yunjhe_wav/segment_04.wav",
+    "start": 23.826,
+    "end": 29.802,
+    "duration": 5.976
   },
   {
     "slide": 5,
-    "file": "assets/sapi_segments_rate2/segment_05.wav",
-    "start": 31.026,
-    "end": 39.698,
-    "duration": 8.671
+    "file": "assets/edge_yunjhe_wav/segment_05.wav",
+    "start": 30.152,
+    "end": 38.192,
+    "duration": 8.04
   },
   {
     "slide": 6,
-    "file": "assets/sapi_segments_rate2/segment_06.wav",
-    "start": 40.048,
-    "end": 48.276,
-    "duration": 8.228
+    "file": "assets/edge_yunjhe_wav/segment_06.wav",
+    "start": 38.542,
+    "end": 46.462,
+    "duration": 7.92
   },
   {
     "slide": 7,
-    "file": "assets/sapi_segments_rate2/segment_07.wav",
-    "start": 48.626,
-    "end": 57.002,
-    "duration": 8.376
+    "file": "assets/edge_yunjhe_wav/segment_07.wav",
+    "start": 46.812,
+    "end": 54.348,
+    "duration": 7.536
   },
   {
     "slide": 8,
-    "file": "assets/sapi_segments_rate2/segment_08.wav",
-    "start": 57.352,
-    "end": 65.191,
-    "duration": 7.839
+    "file": "assets/edge_yunjhe_wav/segment_08.wav",
+    "start": 54.698,
+    "end": 62.282,
+    "duration": 7.584
   },
   {
     "slide": 9,
-    "file": "assets/sapi_segments_rate2/segment_09.wav",
-    "start": 65.541,
-    "end": 73.646,
-    "duration": 8.105
+    "file": "assets/edge_yunjhe_wav/segment_09.wav",
+    "start": 62.632,
+    "end": 70.072,
+    "duration": 7.44
   },
   {
     "slide": 10,
-    "file": "assets/sapi_segments_rate2/segment_10.wav",
-    "start": 73.996,
-    "end": 81.453,
-    "duration": 7.457
+    "file": "assets/edge_yunjhe_wav/segment_10.wav",
+    "start": 70.422,
+    "end": 77.214,
+    "duration": 6.792
   },
   {
     "slide": 11,
-    "file": "assets/sapi_segments_rate2/segment_11.wav",
-    "start": 81.803,
-    "end": 88.932,
-    "duration": 7.129
+    "file": "assets/edge_yunjhe_wav/segment_11.wav",
+    "start": 77.564,
+    "end": 83.948,
+    "duration": 6.384
   },
   {
     "slide": 12,
-    "file": "assets/sapi_segments_rate2/segment_12.wav",
-    "start": 89.282,
-    "end": 96.279,
-    "duration": 6.996
+    "file": "assets/edge_yunjhe_wav/segment_12.wav",
+    "start": 84.298,
+    "end": 90.538,
+    "duration": 6.24
   },
   {
     "slide": 13,
-    "file": "assets/sapi_segments_rate2/segment_13.wav",
-    "start": 96.629,
-    "end": 104.481,
-    "duration": 7.852
+    "file": "assets/edge_yunjhe_wav/segment_13.wav",
+    "start": 90.888,
+    "end": 98.112,
+    "duration": 7.224
   },
   {
     "slide": 14,
-    "file": "assets/sapi_segments_rate2/segment_14.wav",
-    "start": 104.831,
-    "end": 112.959,
-    "duration": 8.128
+    "file": "assets/edge_yunjhe_wav/segment_14.wav",
+    "start": 98.462,
+    "end": 105.686,
+    "duration": 7.224
   },
   {
     "slide": 15,
-    "file": "assets/sapi_segments_rate2/segment_15.wav",
-    "start": 113.309,
-    "end": 120.524,
-    "duration": 7.215
+    "file": "assets/edge_yunjhe_wav/segment_15.wav",
+    "start": 106.036,
+    "end": 112.756,
+    "duration": 6.72
   },
   {
     "slide": 16,
-    "file": "assets/sapi_segments_rate2/segment_16.wav",
-    "start": 120.874,
-    "end": 128.066,
-    "duration": 7.192
+    "file": "assets/edge_yunjhe_wav/segment_16.wav",
+    "start": 113.106,
+    "end": 119.37,
+    "duration": 6.264
   },
   {
     "slide": 17,
-    "file": "assets/sapi_segments_rate2/segment_17.wav",
-    "start": 128.416,
-    "end": 135.398,
-    "duration": 6.982
+    "file": "assets/edge_yunjhe_wav/segment_17.wav",
+    "start": 119.72,
+    "end": 126.224,
+    "duration": 6.504
   },
   {
     "slide": 18,
-    "file": "assets/sapi_segments_rate2/segment_18.wav",
-    "start": 135.748,
-    "end": 143.139,
-    "duration": 7.391
+    "file": "assets/edge_yunjhe_wav/segment_18.wav",
+    "start": 126.574,
+    "end": 133.678,
+    "duration": 7.104
   },
   {
     "slide": 19,
-    "file": "assets/sapi_segments_rate2/segment_19.wav",
-    "start": 143.489,
-    "end": 151.19,
-    "duration": 7.7
+    "file": "assets/edge_yunjhe_wav/segment_19.wav",
+    "start": 134.028,
+    "end": 141.06,
+    "duration": 7.032
   },
   {
     "slide": 20,
-    "file": "assets/sapi_segments_rate2/segment_20.wav",
-    "start": 151.54,
-    "end": 159.735,
-    "duration": 8.195
+    "file": "assets/edge_yunjhe_wav/segment_20.wav",
+    "start": 141.41,
+    "end": 148.682,
+    "duration": 7.272
   }
 ]
