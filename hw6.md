@@ -8,6 +8,93 @@
 
 ---
 
+## 📅 追加更新：2026-06-12
+
+### 1. GitHub Pages 線上部署
+
+本專案已部署到 GitHub Pages，外部使用者可直接透過瀏覽器開啟：
+
+**Live Demo:** https://ian0629082.github.io/HW6_starup50/
+
+部署位置與設定：
+
+| 項目 | 內容 |
+| :--- | :--- |
+| GitHub Repository | `ian0629082/HW6_starup50` |
+| GitHub Pages URL | `https://ian0629082.github.io/HW6_starup50/` |
+| Pages Source | `gh-pages` branch / root |
+| 主要入口檔 | `index.html` |
+| 靜態部署輔助檔 | `.nojekyll` |
+| 部署說明文件 | `GITHUB_PAGES_DEPLOY.md` |
+
+### 2. README 更新
+
+已在 `README.md` 的「基於 CRISP-DM 流程與 Scikit-learn 的機器學習專案」標題下方加入 Live Demo 連結：
+
+```text
+Live Demo : https://ian0629082.github.io/HW6_starup50/
+```
+
+### 3. `index.html` 互動式網站更新
+
+`index.html` 已更新為可直接部署在 GitHub Pages 的互動式網站版本，包含：
+
+* 獲利預測滑桿：R&D Spend、Administration、Marketing Spend。
+* 州別切換：California、Florida、New York。
+* 即時預測結果動畫。
+* 預算結構占比視覺化。
+* AI 預算建議文字回饋。
+* 新增 **Top 9 Feature Selection 互動比較區塊**：
+  * 可切換 `RMSE` / `R-squared`。
+  * 可點選方法名稱顯示或隱藏線條。
+  * 滑鼠移到節點可顯示 tooltip。
+  * 下方表格列出方法、類型、最佳 k、最佳 R2、最佳 RMSE、最佳特徵組合。
+
+### 4. Top 9 Feature Selection 圖表更新
+
+已移除 `Variance Threshold`，目前保留 9 種方法：
+
+1. Correlation Analysis
+2. Chi-Square Test
+3. ANOVA F-Test
+4. Mutual Information
+5. SelectKBest
+6. RFE
+7. Forward Selection
+8. Lasso Regression
+9. Tree-Based Importance
+
+`feature_selection_plots/feature_selection_plot.png` 與 `feature_selection_plots/allinone.png` 已更新為「上方折線圖、下方說明表格」的版本，方便直接放入報告或簡報。
+
+### 5. 線上版與本機版差異
+
+GitHub Pages 屬於靜態網站，不能執行 Python 後端，因此線上版不會直接載入 `best_startup_model.joblib` 或執行 `server.py`。
+
+為了讓外部使用者點開網址即可操作，`index.html` 已內建前端預測公式：
+
+* GitHub Pages / `github.io` 環境：使用前端靜態預測公式。
+* 本機 `server.py` 環境：優先呼叫 `/predict`，使用 `best_startup_model.joblib` 模型。
+* 若本機 API 無法連線：自動退回前端預測公式。
+
+### 6. 本機外部連線支援
+
+`server.py` 已更新為較適合區網連線的版本：
+
+* 預設綁定 `0.0.0.0:8000`。
+* 支援 `HOST` 與 `PORT` 環境變數。
+* 啟動時會顯示 localhost 與 Network URL。
+* 若缺少 `pandas` / `scikit-learn` / `joblib`，會使用 fallback 預測公式避免服務中斷。
+
+目前已安裝本機執行所需套件：
+
+```text
+pandas
+scikit-learn
+joblib
+```
+
+---
+
 ## 📌 一、工作完成摘要
 
 今日工作嚴格遵循 **CRISP-DM** 數據挖掘生命週期，完成了從「數據理解」到「應用程式部署」的完整闭环：
