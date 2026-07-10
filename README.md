@@ -1,7 +1,7 @@
 ﻿# Kaggle 50 Startups Profit Prediction 🚀
 ## 基於 CRISP-DM 流程與 Scikit-learn 的機器學習專案
 
-Live Demo : https://ian0629082.github.io/HW6_starup50/
+Live Demo : https://ian0629082.github.io/Kaggle-50-Startups-Profit-Prediction/
 
 
 本專案利用 **Kaggle 50 Startups** 資料集，建立迴歸分析模型以預測新創公司的年度利潤（Profit）。專案內建了特徵篩選比較系統，並實作了一個採用毛玻璃暗色設計主題的互動式 Web 獲利模擬器。
